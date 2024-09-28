@@ -1,0 +1,6 @@
+{
+	"name": "iroracleazure2",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

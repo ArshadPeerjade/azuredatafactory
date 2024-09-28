@@ -1,0 +1,9 @@
+{
+	"name": "arshadpeerjade",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4cd866b4-6d64-4cac-91b2-5244a3aafee4",
+		"tenantId": "d8a2a820-b265-44e6-97f5-5e0cfac0e2bc"
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"name": "adls2bricks",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "adls_to_AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "HR.DEPARTMENTS.csv",
+				"fileSystem": "practiceeee"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "10",
+				"type": "String"
+			},
+			{
+				"name": "Administration",
+				"type": "String"
+			},
+			{
+				"name": "200",
+				"type": "String"
+			},
+			{
+				"name": "1700",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
