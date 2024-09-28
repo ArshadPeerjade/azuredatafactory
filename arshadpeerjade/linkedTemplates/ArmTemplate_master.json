@@ -31,6 +31,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
 		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
 		"Oracle1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'Oracle1'"
@@ -46,6 +50,10 @@
 		"adls_to_AzureDataLakeStorage1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'adls_to_AzureDataLakeStorage1'"
+		},
+		"ls_gen2_sqlDB_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_gen2_sqlDB'"
 		},
 		"ls_lessthan_records_accountKey": {
 			"type": "secureString",
@@ -71,7 +79,23 @@
 			"type": "string",
 			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
 		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "arshadsqlserver.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "arshadsqlserver"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "arshad"
+		},
 		"adls_to_AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
+		},
+		"ls_gen2_sqlDB_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
 		},
@@ -124,17 +148,17 @@
 					"AzureDatabricksDeltaLake1_accessToken": {
 						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
 					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
 					"adls_to_AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('adls_to_AzureDataLakeStorage1_accountKey')]"
 					},
+					"ls_gen2_sqlDB_accountKey": {
+						"value": "[parameters('ls_gen2_sqlDB_accountKey')]"
+					},
 					"ls_lessthan_records_accountKey": {
 						"value": "[parameters('ls_lessthan_records_accountKey')]"
-					},
-					"Oracle1_connectionString": {
-						"value": "[parameters('Oracle1_connectionString')]"
-					},
-					"Oracle2_connectionString": {
-						"value": "[parameters('Oracle2_connectionString')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
@@ -148,8 +172,20 @@
 					"AzureDataLakeStorage4_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]"
 					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
 					"adls_to_AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('adls_to_AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"ls_gen2_sqlDB_properties_typeProperties_url": {
+						"value": "[parameters('ls_gen2_sqlDB_properties_typeProperties_url')]"
 					},
 					"ls_lessthan_records_properties_typeProperties_url": {
 						"value": "[parameters('ls_lessthan_records_properties_typeProperties_url')]"
@@ -171,6 +207,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"Oracle1_connectionString": {
+						"value": "[parameters('Oracle1_connectionString')]"
+					},
+					"Oracle2_connectionString": {
+						"value": "[parameters('Oracle2_connectionString')]"
 					},
 					"Oracle3_connectionString": {
 						"value": "[parameters('Oracle3_connectionString')]"
