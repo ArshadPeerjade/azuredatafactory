@@ -1,0 +1,28 @@
+{
+	"name": "ds_gen_sql_auto_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_gen_sql_auto2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"table_name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().table_name",
+				"type": "Expression"
+			}
+		}
+	}
+}
