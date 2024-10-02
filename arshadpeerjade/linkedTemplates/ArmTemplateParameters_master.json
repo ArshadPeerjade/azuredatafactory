@@ -20,6 +20,9 @@
 		"AzureDataLakeStorage4_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
 		"AzureDatabricksDeltaLake1_accessToken": {
 			"value": ""
 		},
@@ -41,6 +44,12 @@
 		"ls_gen2_sqlDB_accountKey": {
 			"value": ""
 		},
+		"ls_gen2_sql_auto_accountKey": {
+			"value": ""
+		},
+		"ls_gen_sql_auto2_password": {
+			"value": ""
+		},
 		"ls_lessthan_records_accountKey": {
 			"value": ""
 		},
@@ -59,6 +68,9 @@
 		"AzureDataLakeStorage4_properties_typeProperties_url": {
 			"value": "https://arshadpractice.dfs.core.windows.net/"
 		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://arshadpractice.dfs.core.windows.net/"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "arshadsqlserver.database.windows.net"
 		},
@@ -73,6 +85,18 @@
 		},
 		"ls_gen2_sqlDB_properties_typeProperties_url": {
 			"value": "https://arshadpractice.dfs.core.windows.net/"
+		},
+		"ls_gen2_sql_auto_properties_typeProperties_url": {
+			"value": "https://arshadpractice.dfs.core.windows.net/"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_server": {
+			"value": "arshadsqlserver.database.windows.net"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_database": {
+			"value": "arshadsqlserver"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_userName": {
+			"value": "arshad"
 		},
 		"ls_lessthan_records_properties_typeProperties_url": {
 			"value": "https://arshadpractice.dfs.core.windows.net/"

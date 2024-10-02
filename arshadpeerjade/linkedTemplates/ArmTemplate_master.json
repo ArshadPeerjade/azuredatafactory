@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage4'"
 		},
+		"AzureDataLakeStorage5_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage5'"
+		},
 		"AzureDatabricksDeltaLake1_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricksDeltaLake1'"
@@ -55,6 +59,14 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_gen2_sqlDB'"
 		},
+		"ls_gen2_sql_auto_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_gen2_sql_auto'"
+		},
+		"ls_gen_sql_auto2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_gen_sql_auto2'"
+		},
 		"ls_lessthan_records_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_lessthan_records'"
@@ -79,6 +91,10 @@
 			"type": "string",
 			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
 		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "arshadsqlserver.database.windows.net"
@@ -98,6 +114,22 @@
 		"ls_gen2_sqlDB_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
+		},
+		"ls_gen2_sql_auto_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://arshadpractice.dfs.core.windows.net/"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "arshadsqlserver.database.windows.net"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "arshadsqlserver"
+		},
+		"ls_gen_sql_auto2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "arshad"
 		},
 		"ls_lessthan_records_properties_typeProperties_url": {
 			"type": "string",
@@ -145,6 +177,9 @@
 					"AzureDataLakeStorage4_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage4_accountKey')]"
 					},
+					"AzureDataLakeStorage5_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage5_accountKey')]"
+					},
 					"AzureDatabricksDeltaLake1_accessToken": {
 						"value": "[parameters('AzureDatabricksDeltaLake1_accessToken')]"
 					},
@@ -156,6 +191,12 @@
 					},
 					"ls_gen2_sqlDB_accountKey": {
 						"value": "[parameters('ls_gen2_sqlDB_accountKey')]"
+					},
+					"ls_gen2_sql_auto_accountKey": {
+						"value": "[parameters('ls_gen2_sql_auto_accountKey')]"
+					},
+					"ls_gen_sql_auto2_password": {
+						"value": "[parameters('ls_gen_sql_auto2_password')]"
 					},
 					"ls_lessthan_records_accountKey": {
 						"value": "[parameters('ls_lessthan_records_accountKey')]"
@@ -172,6 +213,9 @@
 					"AzureDataLakeStorage4_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]"
 					},
+					"AzureDataLakeStorage5_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage5_properties_typeProperties_url')]"
+					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
 					},
@@ -186,6 +230,18 @@
 					},
 					"ls_gen2_sqlDB_properties_typeProperties_url": {
 						"value": "[parameters('ls_gen2_sqlDB_properties_typeProperties_url')]"
+					},
+					"ls_gen2_sql_auto_properties_typeProperties_url": {
+						"value": "[parameters('ls_gen2_sql_auto_properties_typeProperties_url')]"
+					},
+					"ls_gen_sql_auto2_properties_typeProperties_server": {
+						"value": "[parameters('ls_gen_sql_auto2_properties_typeProperties_server')]"
+					},
+					"ls_gen_sql_auto2_properties_typeProperties_database": {
+						"value": "[parameters('ls_gen_sql_auto2_properties_typeProperties_database')]"
+					},
+					"ls_gen_sql_auto2_properties_typeProperties_userName": {
+						"value": "[parameters('ls_gen_sql_auto2_properties_typeProperties_userName')]"
 					},
 					"ls_lessthan_records_properties_typeProperties_url": {
 						"value": "[parameters('ls_lessthan_records_properties_typeProperties_url')]"
@@ -224,6 +280,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'arshadpeerjade_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "arshadpeerjade_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'arshadpeerjade_ArmTemplate_1')]"
 			]
 		}
 	]
